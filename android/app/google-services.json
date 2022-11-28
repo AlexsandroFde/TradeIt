@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1040892707320",
+    "project_id": "imc-login-2dcef",
+    "storage_bucket": "imc-login-2dcef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040892707320:android:6e2ea1e84b7612dce1160d",
+        "android_client_info": {
+          "package_name": "com.android.tools.build"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040892707320-9huegpurcsfdpl11kekr8fk642732n3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbx0sZMF0QvxHJCLTRy-8SJMXWY_uZeGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040892707320-9huegpurcsfdpl11kekr8fk642732n3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040892707320:android:64ae3348a0588287e1160d",
+        "android_client_info": {
+          "package_name": "com.example.calculadora_imc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040892707320-9huegpurcsfdpl11kekr8fk642732n3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbx0sZMF0QvxHJCLTRy-8SJMXWY_uZeGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040892707320-9huegpurcsfdpl11kekr8fk642732n3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
