@@ -1,5 +1,5 @@
-import 'package:trade_it/auth_check/bloc.dart';
-import 'package:trade_it/screens/autenticacao/autenticacao.dart';
+import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
+import 'package:trade_it/screens/autenticacao/auth_page.dart';
 
 class EntrarButton extends StatefulWidget {
   const EntrarButton({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class _EntrarButtonState extends State<EntrarButton> {
               child: ElevatedButton(
                   style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(state is AuthPageLoginState && state.button ? null : const Color.fromRGBO(117, 54, 175, 0.4)),
                       elevation: const MaterialStatePropertyAll(0)),
-                  onPressed: () => signIn(),
+                  onPressed: () => state is AuthPageLoginState && state.button ? signIn() : null,
                   child: const Text("Entrar",style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),)),
             );
       }

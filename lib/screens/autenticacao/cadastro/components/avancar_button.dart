@@ -1,24 +1,24 @@
-import 'package:trade_it/auth_check/bloc.dart';
+import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 
-class AvancarButton extends StatefulWidget {
+class AvancarButton extends StatelessWidget {
   const AvancarButton({Key? key}) : super(key: key);
 
   @override
-  State<AvancarButton> createState() => _AvancarButtonState();
-}
-
-class _AvancarButtonState extends State<AvancarButton> {
-  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
-      width: size.width,
-      height: 46,
-      child: ElevatedButton(
-          style: const ButtonStyle(
-              elevation: MaterialStatePropertyAll(0)),
-          onPressed: () => context.read<AuthPageBloc>().add(MudarTela(novaTela: "TelefoneEmail")),
-          child: const Text("Avançar",style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),)),
+    return BlocBuilder<AuthPageBloc, AuthPageState>(
+      builder: (context, state) {
+        return SizedBox(
+          width: size.width,
+          height: 46,
+          child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(state is AuthPageCadastroState && state.button ? null : const Color.fromRGBO(117, 54, 175, 0.4)),
+                  elevation: const MaterialStatePropertyAll(0)),
+              onPressed: () => state is AuthPageCadastroState && state.button ? context.read<AuthPageBloc>().add(MudarTela(novaTela: "TelefoneEmail")) : null,
+              child: const Text("Avançar",style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),)),
+        );
+      }
     );
   }
 }

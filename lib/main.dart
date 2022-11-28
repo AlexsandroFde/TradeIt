@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:trade_it/auth_check/auth_page.dart';
-import 'package:trade_it/auth_check/bloc.dart';
+import 'package:trade_it/screens/autenticacao/auth_page.dart';
+import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 import 'package:trade_it/constants/constants.dart';
 import 'package:trade_it/firebase/firebase.dart';
 import 'package:trade_it/models/utils.dart';

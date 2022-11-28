@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:trade_it/auth_check/bloc/auth_page_events.dart';
+import 'package:trade_it/screens/autenticacao/bloc/auth_page_events.dart';
+import 'package:trade_it/screens/autenticacao/bloc/auth_page_bloc.dart';
+import 'package:trade_it/screens/autenticacao/bloc/auth_page_state.dart';
 
-import '../../../../auth_check/bloc/auth_page_bloc.dart';
-import '../../../../auth_check/bloc/auth_page_state.dart';
-
-class ButtonCadastro extends StatefulWidget {
+class ButtonCadastro extends StatelessWidget {
   const ButtonCadastro({Key? key}) : super(key: key);
 
-  @override
-  State<ButtonCadastro> createState() => _ButtonCadastroState();
-}
-
-class _ButtonCadastroState extends State<ButtonCadastro> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

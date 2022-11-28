@@ -1,16 +1,11 @@
 import 'package:flutter/gestures.dart';
-import 'package:trade_it/auth_check/bloc.dart';
+import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 import 'package:trade_it/constants/constants.dart';
 import 'package:trade_it/screens/autenticacao/login/components/components.dart';
 
-class Login extends StatefulWidget {
+class Login extends StatelessWidget {
   const Login({super.key});
 
-  @override
-  State<Login> createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

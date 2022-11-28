@@ -1,7 +1,4 @@
-import 'package:equatable/equatable.dart';
-
-class AuthPageState extends Equatable{
-  @override
+class AuthPageState{
   List<Object?> get props => [];
 }
 
@@ -14,11 +11,15 @@ class AuthPageLoginState extends AuthPageState{
   AuthPageLoginState({this.button = false});
 }
 
-class AuthPageLoginState2 extends AuthPageState{}
+class AuthPageRecuperarSenhaState extends AuthPageState{
+  final bool button;
+  AuthPageRecuperarSenhaState({this.button = false});
+}
 
-class AuthPageRecuperarSenhaState extends AuthPageState{}
-
-class AuthPageCadastroState extends AuthPageState{}
+class AuthPageCadastroState extends AuthPageState{
+  final bool button;
+  AuthPageCadastroState({this.button = false});
+}
 
 class AuthPageCadastrarTelefoneEmailState extends AuthPageState{}
 

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'dart:math' as math;
 
-import '../../../../auth_check/bloc/auth_page_bloc.dart';
-import '../../../../auth_check/bloc/auth_page_events.dart';
+import '../../../autenticacao/bloc/auth_page_bloc.dart';
+import '../../../autenticacao/bloc/auth_page_events.dart';
 import '../../../../constants/constants.dart';
 import '../../../../data/data.dart';
 import '../../../../models/barra_lateral.dart';

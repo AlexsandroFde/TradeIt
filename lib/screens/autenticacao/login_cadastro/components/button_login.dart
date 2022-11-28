@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:trade_it/auth_check/bloc/auth_page_bloc.dart';
-import 'package:trade_it/auth_check/bloc/auth_page_events.dart';
+import 'package:trade_it/screens/autenticacao/bloc/auth_page_bloc.dart';
+import 'package:trade_it/screens/autenticacao/bloc/auth_page_events.dart';
 
 class ButtonLogin extends StatelessWidget {
   const ButtonLogin({Key? key}) : super(key: key);

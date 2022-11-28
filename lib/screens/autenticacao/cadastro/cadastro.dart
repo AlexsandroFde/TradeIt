@@ -1,17 +1,8 @@
-import 'package:provider/provider.dart';
-import 'package:trade_it/auth_check/bloc/auth_page_bloc.dart';
-import 'package:trade_it/auth_check/bloc/auth_page_events.dart';
-import 'package:trade_it/screens/autenticacao/autenticacao.dart';
 import 'package:trade_it/screens/autenticacao/cadastro/components/components.dart';
+import 'package:trade_it/screens/autenticacao/auth_page.dart';
 
-class Cadastro extends StatefulWidget {
+class Cadastro extends StatelessWidget {
   const Cadastro({Key? key}) : super(key: key);
-
-  @override
-  State<Cadastro> createState() => _CadastroState();
-}
-
-class _CadastroState extends State<Cadastro> {
 
   @override
   Widget build(BuildContext context) {
@@ -73,14 +64,5 @@ class _CadastroState extends State<Cadastro> {
         ],
       ),
     );
-  }
-
-  Future signUp() async {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => const Center(child: CircularProgressIndicator()),
-    );
-    context.read<AuthPageBloc>().add(BuscarUsuario(email: nomeController.text, senha: sobrenomeController.text, login: false));
   }
 }

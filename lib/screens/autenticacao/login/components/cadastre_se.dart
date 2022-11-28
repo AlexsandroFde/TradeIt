@@ -1,5 +1,5 @@
 import 'package:flutter/gestures.dart';
-import 'package:trade_it/auth_check/bloc.dart';
+import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 import 'package:trade_it/constants/constants.dart';
 
 class CadastreSe extends StatelessWidget {
@@ -7,7 +7,7 @@ class CadastreSe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return         Container(
+    return Container(
       height: 40,
       decoration: BoxDecoration(
           border: Border.all(

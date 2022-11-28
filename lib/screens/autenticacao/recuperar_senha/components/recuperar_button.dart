@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:trade_it/models/utils.dart';
-import 'package:trade_it/screens/autenticacao/autenticacao.dart';
 import 'package:trade_it/constants/constants.dart';
 import 'package:trade_it/main.dart';
+import 'package:trade_it/screens/autenticacao/auth_page.dart';
 
 class RecuperarButton extends StatefulWidget {
   const RecuperarButton({Key? key}) : super(key: key);

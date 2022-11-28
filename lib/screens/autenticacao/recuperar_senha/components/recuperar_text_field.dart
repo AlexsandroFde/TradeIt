@@ -1,5 +1,5 @@
 import 'package:email_validator/email_validator.dart';
-import 'package:trade_it/screens/autenticacao/autenticacao.dart';
+import 'package:trade_it/screens/autenticacao/auth_page.dart';
 
 class RecuperarTextField extends StatelessWidget {
   const RecuperarTextField({Key? key}) : super(key: key);

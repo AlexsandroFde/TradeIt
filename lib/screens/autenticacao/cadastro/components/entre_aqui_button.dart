@@ -1,4 +1,4 @@
-import 'package:trade_it/auth_check/bloc.dart';
+import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 
 class EntreAquiButton extends StatelessWidget {
   const EntreAquiButton({Key? key}) : super(key: key);

@@ -17,10 +17,4 @@ class MudarTela extends AuthPageEvent{
   MudarTela({required this.novaTela});
 }
 
-class MudarBotao extends AuthPageEvent{
-  final String email;
-  final String senha;
-  MudarBotao({required this.email, required this.senha});
-}
-
 class Deslogar extends AuthPageEvent{}

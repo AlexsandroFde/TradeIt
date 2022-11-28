@@ -3,18 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trade_it/constants/constants.dart';
 import 'package:trade_it/screens/autenticacao/recuperar_senha/components/components.dart';
-import 'package:trade_it/auth_check/bloc/auth_page_bloc.dart';
-import 'package:trade_it/auth_check/bloc/auth_page_events.dart';
+import 'package:trade_it/screens/autenticacao/bloc/auth_page_bloc.dart';
+import 'package:trade_it/screens/autenticacao/bloc/auth_page_events.dart';
 
-class RecuperarSenha extends StatefulWidget {
+class RecuperarSenha extends StatelessWidget {
   const RecuperarSenha({Key? key}) : super(key: key);
-
-  @override
-  State<RecuperarSenha> createState() => _RecuperarSenhaState();
-}
-
-class _RecuperarSenhaState extends State<RecuperarSenha> {
-  final formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
