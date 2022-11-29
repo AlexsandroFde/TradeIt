@@ -3,6 +3,7 @@ import 'package:trade_it/models/utils.dart';
 import 'package:trade_it/constants/constants.dart';
 import 'package:trade_it/main.dart';
 import 'package:trade_it/screens/autenticacao/auth_page.dart';
+import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 
 class RecuperarButton extends StatefulWidget {
   const RecuperarButton({Key? key}) : super(key: key);
@@ -15,17 +16,23 @@ class _RecuperarButtonState extends State<RecuperarButton> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
-      width: size.width,
-      height: 46,
-      child: ElevatedButton(
-          style: const ButtonStyle(
-              elevation: MaterialStatePropertyAll(0)),
-          onPressed: () => resetPassword(),
-          child: const Text(
-            "Recuperar senha",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-          )),
+    return BlocBuilder<AuthPageBloc,AuthPageState>(
+      builder: (context, state) {
+        bool button = state is AuthPageRecuperarSenhaState && state.button;
+        return SizedBox(
+          width: size.width,
+          height: 46,
+          child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(button ? null : const Color.fromRGBO(117, 54, 175, 0.4)),
+                  elevation: const MaterialStatePropertyAll(0)),
+              onPressed: () => button ? resetPassword() : null,
+              child: const Text(
+                "Recuperar senha",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              )),
+        );
+      }
     );
   }
 

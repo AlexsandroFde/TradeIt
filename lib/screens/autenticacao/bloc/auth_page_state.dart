@@ -21,7 +21,11 @@ class AuthPageCadastroState extends AuthPageState{
   AuthPageCadastroState({this.button = false});
 }
 
-class AuthPageCadastrarTelefoneEmailState extends AuthPageState{}
+class AuthPageCadastrarTelefoneEmailState extends AuthPageState{
+  final bool telefone;
+  final bool button;
+  AuthPageCadastrarTelefoneEmailState({this.telefone = true, this.button = false});
+}
 
 class AuthPageConfirmarCodigoState extends AuthPageState{}
 

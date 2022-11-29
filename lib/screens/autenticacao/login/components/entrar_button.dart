@@ -13,15 +13,15 @@ class _EntrarButtonState extends State<EntrarButton> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return BlocBuilder<AuthPageBloc, AuthPageState>(
-      bloc: BlocProvider.of<AuthPageBloc>(context),
       builder: (context, state) {
+        bool button = state is AuthPageLoginState && state.button;
         return SizedBox(
               width: size.width,
               height: 46,
               child: ElevatedButton(
-                  style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(state is AuthPageLoginState && state.button ? null : const Color.fromRGBO(117, 54, 175, 0.4)),
+                  style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(button ? null : const Color.fromRGBO(117, 54, 175, 0.4)),
                       elevation: const MaterialStatePropertyAll(0)),
-                  onPressed: () => state is AuthPageLoginState && state.button ? signIn() : null,
+                  onPressed: () => button ? signIn() : null,
                   child: const Text("Entrar",style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),)),
             );
       }

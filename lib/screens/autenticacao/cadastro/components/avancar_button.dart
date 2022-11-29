@@ -8,14 +8,15 @@ class AvancarButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return BlocBuilder<AuthPageBloc, AuthPageState>(
       builder: (context, state) {
+        bool button = state is AuthPageCadastroState && state.button;
         return SizedBox(
           width: size.width,
           height: 46,
           child: ElevatedButton(
               style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(state is AuthPageCadastroState && state.button ? null : const Color.fromRGBO(117, 54, 175, 0.4)),
+                  backgroundColor: MaterialStatePropertyAll(button ? null : const Color.fromRGBO(117, 54, 175, 0.4)),
                   elevation: const MaterialStatePropertyAll(0)),
-              onPressed: () => state is AuthPageCadastroState && state.button ? context.read<AuthPageBloc>().add(MudarTela(novaTela: "TelefoneEmail")) : null,
+              onPressed: () => button ? context.read<AuthPageBloc>().add(MudarTela(novaTela: "Telefone")) : null,
               child: const Text("Avançar",style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),)),
         );
       }

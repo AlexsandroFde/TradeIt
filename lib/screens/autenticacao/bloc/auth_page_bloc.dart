@@ -1,3 +1,4 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trade_it/screens/autenticacao/bloc/auth_page_events.dart';
@@ -43,12 +44,16 @@ class AuthPageBloc extends Bloc<AuthPageEvent, AuthPageState>{
   _onMudarTela(MudarTela event, emit) {
     bool buttonL = emailController.text.isEmpty || passwordController.text.isEmpty;
     bool buttonC = nomeController.text.isEmpty || sobrenomeController.text.isEmpty;
+    bool buttonT = cellController.text.length != 13;
+    bool buttonE = emailController.text.isEmpty || !EmailValidator.validate(emailController.text);
     switch (event.novaTela){
       case "Login" : return emit(AuthPageLoginState(button: !buttonL));
       case "Recuperar" : return emit(AuthPageRecuperarSenhaState());
       case "Cadastro" : return emit(AuthPageCadastroState(button: !buttonC));
-      case "TelefoneEmail" : return emit(AuthPageCadastrarTelefoneEmailState());
-      case "Confirmar" : return emit(AuthPageConfirmarCodigoState());
+      case "Telefone" : return emit(AuthPageCadastrarTelefoneEmailState(button: !buttonT, telefone: true));
+      case "Email" : return emit(AuthPageCadastrarTelefoneEmailState(button: !buttonE, telefone: false));
+      case "ConfirmarE" : return emit(AuthPageConfirmarCodigoState());
+      case "ConfirmarT" : return emit(AuthPageConfirmarCodigoState());
       case "Senha" : return emit(AuthPageCadastrarSenhaState());
       default: return emit(AuthPageLoginCadastroState());
     }

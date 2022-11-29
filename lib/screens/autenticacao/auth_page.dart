@@ -20,6 +20,7 @@ class AuthPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: BlocBuilder<AuthPageBloc, AuthPageState>(
         bloc: BlocProvider.of<AuthPageBloc>(context),
         builder: (context, state) {

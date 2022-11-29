@@ -10,8 +10,7 @@ class RecuperarTextField extends StatelessWidget {
       keyboardType: TextInputType.emailAddress,
       textInputAction: TextInputAction.done,
       autovalidateMode: AutovalidateMode.onUserInteraction,
-      validator: (email) =>
-      email != null && !EmailValidator.validate(email) ? 'Insira um email válido!' : null,
+      validator: (email) => email != null && !EmailValidator.validate(email) ? 'Insira um email válido!' : null,
       decoration: const InputDecoration(
           hintText: "Digite seu email",
           border: OutlineInputBorder(

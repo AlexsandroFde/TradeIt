@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trade_it/screens/autenticacao/recuperar_senha/recuperar_senha.dart';
-
-import '../screens/app/favoritos/favoritos.dart';
-import '../screens/app/notificacoes/notificacoes.dart';
+import 'package:trade_it/screens/app/favoritos/favoritos.dart';
+import 'package:trade_it/screens/app/notificacoes/notificacoes.dart';
 
 //colors
 
