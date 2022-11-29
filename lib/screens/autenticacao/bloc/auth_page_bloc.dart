@@ -46,14 +46,15 @@ class AuthPageBloc extends Bloc<AuthPageEvent, AuthPageState>{
     bool buttonC = nomeController.text.isEmpty || sobrenomeController.text.isEmpty;
     bool buttonT = cellController.text.length != 13;
     bool buttonE = emailController.text.isEmpty || !EmailValidator.validate(emailController.text);
+    bool buttonCC = codigoCotroller.text.length != 21;
     switch (event.novaTela){
       case "Login" : return emit(AuthPageLoginState(button: !buttonL));
       case "Recuperar" : return emit(AuthPageRecuperarSenhaState());
       case "Cadastro" : return emit(AuthPageCadastroState(button: !buttonC));
       case "Telefone" : return emit(AuthPageCadastrarTelefoneEmailState(button: !buttonT, telefone: true));
       case "Email" : return emit(AuthPageCadastrarTelefoneEmailState(button: !buttonE, telefone: false));
-      case "ConfirmarE" : return emit(AuthPageConfirmarCodigoState());
-      case "ConfirmarT" : return emit(AuthPageConfirmarCodigoState());
+      case "ConfirmarT" : return emit(AuthPageConfirmarCodigoState(button: !buttonCC, telefone: true));
+      case "ConfirmarE" : return emit(AuthPageConfirmarCodigoState(button: !buttonCC, telefone: false));
       case "Senha" : return emit(AuthPageCadastrarSenhaState());
       default: return emit(AuthPageLoginCadastroState());
     }

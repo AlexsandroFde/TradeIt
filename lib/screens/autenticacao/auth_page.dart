@@ -13,6 +13,7 @@ final cellController = TextEditingController();
 final passwordController = TextEditingController();
 final nomeController = TextEditingController();
 final sobrenomeController = TextEditingController();
+final codigoCotroller = TextEditingController();
 
 class AuthPage extends StatelessWidget {
   const AuthPage({Key? key}) : super(key: key);

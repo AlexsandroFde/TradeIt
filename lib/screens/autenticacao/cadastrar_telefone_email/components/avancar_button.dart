@@ -1,7 +1,7 @@
 import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 
-class AvancarButton extends StatelessWidget {
-  const AvancarButton ({Key? key}) : super(key: key);
+class AvancarButtonTE extends StatelessWidget {
+  const AvancarButtonTE ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -33,7 +33,7 @@ class Cadastro extends StatelessWidget {
                     const SizedBox(height: 15),
                     const SobrenomeTextField(),
                     const SizedBox(height: 15),
-                    const AvancarButton(),
+                    const AvancarButtonC(),
                     const SizedBox(height: 20),
                     Stack(
                         children: [
