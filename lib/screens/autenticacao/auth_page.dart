@@ -1,4 +1,5 @@
 import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
+import 'package:trade_it/screens/autenticacao/cadastrar_senha/cadastrar_senha.dart';
 import 'package:trade_it/screens/autenticacao/cadastrar_telefone_email/cadastrar_telefone_email.dart';
 import 'package:trade_it/screens/autenticacao/confimar_codigo/confirmar_codigo.dart';
 import 'package:trade_it/screens/autenticacao/login_cadastro/login_cadastro.dart';
@@ -11,6 +12,7 @@ export 'package:flutter/material.dart';
 final emailController = TextEditingController();
 final cellController = TextEditingController();
 final passwordController = TextEditingController();
+final passwordConfirmController = TextEditingController();
 final nomeController = TextEditingController();
 final sobrenomeController = TextEditingController();
 final codigoCotroller = TextEditingController();
@@ -42,6 +44,9 @@ class AuthPage extends StatelessWidget {
           }
           else if (state is AuthPageConfirmarCodigoState){
             return const ConfirmarCodigo();
+          }
+          else if (state is AuthPageCadastrarSenhaState){
+            return const CadastrarSenha();
           }
           else if (state is AuthPageCadastroState){
             return const Cadastro();

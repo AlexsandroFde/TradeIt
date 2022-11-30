@@ -9,6 +9,7 @@ class AvancarButtonCC extends StatelessWidget {
     return BlocBuilder<AuthPageBloc, AuthPageState>(
       builder: (context, state) {
         bool button = state is AuthPageConfirmarCodigoState && state.button;
+        bool telefone = state is AuthPageConfirmarCodigoState && state.telefone;
         return SizedBox(
           width: size.width,
           height: 46,
@@ -16,7 +17,7 @@ class AvancarButtonCC extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: MaterialStatePropertyAll(button ?  null : const Color.fromRGBO(117, 54, 175, 0.4)),
                   elevation: const MaterialStatePropertyAll(0)),
-              onPressed: () => button ? context.read<AuthPageBloc>().add(MudarTela(novaTela: "Senha")) : null,
+              onPressed: () => button ? context.read<AuthPageBloc>().add(MudarTela(novaTela: telefone ? "SenhaT" : "SenhaE")) : null,
               child: const Text("Avançar",style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),)),
         );
       }

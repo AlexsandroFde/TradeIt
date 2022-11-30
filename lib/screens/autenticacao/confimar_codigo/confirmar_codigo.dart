@@ -28,6 +28,7 @@ class ConfirmarCodigo extends StatelessWidget {
                   textAlign: TextAlign.center,
                     text: TextSpan(
                     text: "Insira o código de confirmação que enviamos para o ${telefone ? "telefone +55 ${cellController.text}" : "email ${emailController.text}"}.",
+                    style: const TextStyle(color: Colors.black),
                     children: [
                       TextSpan(
                           text: " Reenviar código.", style: const TextStyle(fontWeight: FontWeight.bold, color: base),

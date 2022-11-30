@@ -1,5 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:trade_it/screens/autenticacao/auth_page.dart';
+import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 
 class RecuperarTextField extends StatelessWidget {
   const RecuperarTextField({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class RecuperarTextField extends StatelessWidget {
       keyboardType: TextInputType.emailAddress,
       textInputAction: TextInputAction.done,
       autovalidateMode: AutovalidateMode.onUserInteraction,
+      onChanged: (email) => context.read<AuthPageBloc>().add(MudarTela(novaTela: "Recuperar")),
       validator: (email) => email != null && !EmailValidator.validate(email) ? 'Insira um email válido!' : null,
       decoration: const InputDecoration(
           hintText: "Digite seu email",

@@ -1,4 +1,5 @@
 import 'package:flutter_multi_formatter/formatters/masked_input_formatter.dart';
+import 'package:trade_it/constants/constants.dart';
 import 'package:trade_it/screens/autenticacao/auth_page.dart';
 import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 
@@ -7,12 +8,12 @@ class CodigoTextField extends StatelessWidget {
 
   _buildCustomTextField(BuildContext context, int index) {
     return const Padding(
-      padding: EdgeInsetsDirectional.only(end: 13),
+      padding: EdgeInsetsDirectional.only(end: 12.5),
       child: SizedBox(
         width: 20,
         child: Divider(
           thickness: 2,
-          color: Color.fromRGBO(117, 54, 175, 1),
+          color: base
         ),
       ),
     );
@@ -36,7 +37,7 @@ class CodigoTextField extends StatelessWidget {
               }),
             SizedBox(
               height: 100,
-              width: 20*6 + 12*5,
+              width: 20*6 + 12*5+1,
               child: TextFormField(
                 keyboardType: TextInputType.number,
                 textInputAction: TextInputAction.done,

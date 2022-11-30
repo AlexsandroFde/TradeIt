@@ -33,6 +33,12 @@ class AuthPageConfirmarCodigoState extends AuthPageState{
   AuthPageConfirmarCodigoState({this.telefone = true, this.button = false});
 }
 
-class AuthPageCadastrarSenhaState extends AuthPageState{}
+class AuthPageCadastrarSenhaState extends AuthPageState{
+  final bool obscure1;
+  final bool obscure2;
+  final bool telefone;
+  final bool button;
+  AuthPageCadastrarSenhaState({this. obscure1 = true, this.obscure2 = true, this.telefone = true, this.button = false});
+}
 
 class AuthPageHomeState extends AuthPageState{}

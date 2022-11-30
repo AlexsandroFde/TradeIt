@@ -14,7 +14,9 @@ class BuscarUsuario extends AuthPageEvent{
 
 class MudarTela extends AuthPageEvent{
   final String novaTela;
-  MudarTela({required this.novaTela});
+  final bool obscure1;
+  final bool obscure2;
+  MudarTela({required this.novaTela, this.obscure1 = true, this.obscure2 = true});
 }
 
 class Deslogar extends AuthPageEvent{}
