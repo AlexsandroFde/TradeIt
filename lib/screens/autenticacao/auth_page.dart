@@ -9,14 +9,6 @@ import 'package:trade_it/screens/autenticacao/login/login.dart';
 import 'package:trade_it/screens/autenticacao/recuperar_senha/recuperar_senha.dart';
 export 'package:flutter/material.dart';
 
-final emailController = TextEditingController();
-final cellController = TextEditingController();
-final passwordController = TextEditingController();
-final passwordConfirmController = TextEditingController();
-final nomeController = TextEditingController();
-final sobrenomeController = TextEditingController();
-final codigoCotroller = TextEditingController();
-
 class AuthPage extends StatelessWidget {
   const AuthPage({Key? key}) : super(key: key);
 
@@ -30,29 +22,17 @@ class AuthPage extends StatelessWidget {
           if (state is AuthPageHomeState) {
             return const Home();
           }
-          else if (state is AuthPageLoginCadastroState){
-            return const LoginCadastro();
-          }
-          else if (state is AuthPageLoginState){
-            return const Login();
-          }
-          else if (state is AuthPageRecuperarSenhaState){
-            return const RecuperarSenha();
-          }
-          else if (state is AuthPageCadastrarTelefoneEmailState){
-            return const CadastrarTelefoneEmail();
-          }
-          else if (state is AuthPageConfirmarCodigoState){
-            return const ConfirmarCodigo();
-          }
-          else if (state is AuthPageCadastrarSenhaState){
-            return const CadastrarSenha();
-          }
-          else if (state is AuthPageCadastroState){
-            return const Cadastro();
-          }
           else{
-            return const Center(child: CircularProgressIndicator());
+            switch (state.tela){
+              case "LoginCadastro": return const LoginCadastro();
+              case "Login": return const Login();
+              case "Recuperar": return const RecuperarSenha();
+              case "Cadastro": return const Cadastro();
+              case "TelefoneEmail": return const CadastrarTelefoneEmail();
+              case "Codigo": return const ConfirmarCodigo();
+              case "Senha": return const CadastrarSenha();
+              default: return const Center(child: CircularProgressIndicator());
+            }
           }
         }
       ),

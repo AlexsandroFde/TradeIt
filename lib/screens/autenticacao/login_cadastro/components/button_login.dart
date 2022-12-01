@@ -16,7 +16,7 @@ class ButtonLogin extends StatelessWidget {
           width: size.width,
           height: 46,
           child: ElevatedButton(
-            onPressed: () => context.read<AuthPageBloc>().add(MudarTela(novaTela: "Login")),
+            onPressed: () => context.read<AuthPageBloc>().add(MudarTela(tela: "Login")),
             style: const ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(Colors.white),
               elevation: MaterialStatePropertyAll(0),

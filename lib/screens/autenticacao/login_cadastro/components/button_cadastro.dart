@@ -17,7 +17,7 @@ class ButtonCadastro extends StatelessWidget {
           width: size.width,
           height: 46,
           child: ElevatedButton(
-          onPressed: () => context.read<AuthPageBloc>().add(MudarTela(novaTela: "Cadastro")),
+          onPressed: () => context.read<AuthPageBloc>().add(MudarTela(tela: "Cadastro")),
             style: const ButtonStyle(
               elevation: MaterialStatePropertyAll(0),),
             child: const Text(

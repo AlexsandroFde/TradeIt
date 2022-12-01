@@ -47,7 +47,7 @@ class RecuperarSenha extends StatelessWidget {
                     text: TextSpan(
                         text: "Voltar ao login",
                         style: const TextStyle(color: base, fontWeight: FontWeight.bold),
-                        recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(novaTela: "Login"))
+                        recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(tela: "Login"))
                     )
                 ),
               ),

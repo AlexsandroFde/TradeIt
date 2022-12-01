@@ -13,10 +13,30 @@ class BuscarUsuario extends AuthPageEvent{
 }
 
 class MudarTela extends AuthPageEvent{
-  final String novaTela;
-  final bool obscure1;
-  final bool obscure2;
-  MudarTela({required this.novaTela, this.obscure1 = true, this.obscure2 = true});
+  final bool? telefone;
+  final bool? obscure1;
+  final bool? obscure2;
+  final String? email;
+  final String? senha;
+  final String? senhaConfirm;
+  final String? nome;
+  final String? sobrenome;
+  final String? cell;
+  final String? codigo;
+  final String? tela;
+
+  MudarTela({this.telefone,
+    this.obscure1,
+    this.obscure2,
+    this.email,
+    this.senha,
+    this.senhaConfirm,
+    this.nome,
+    this.sobrenome,
+    this.cell,
+    this.codigo,
+    this.tela
+  });
 }
 
 class Deslogar extends AuthPageEvent{}

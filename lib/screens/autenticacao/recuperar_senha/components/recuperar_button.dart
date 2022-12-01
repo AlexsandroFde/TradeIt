@@ -1,3 +1,4 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:trade_it/models/utils.dart';
 import 'package:trade_it/constants/constants.dart';
@@ -11,7 +12,7 @@ class RecuperarButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    Future resetPassword() async {
+    Future resetPassword(String email) async {
       showDialog(
         context: context,
         barrierDismissible: false,
@@ -19,7 +20,7 @@ class RecuperarButton extends StatelessWidget {
       );
       try {
         await FirebaseAuth.instance.sendPasswordResetEmail(
-            email: emailController.text.trim()
+            email: email.trim()
         );
         Utils.showSnackBar("Email para redefinição de senha enviado!", color: base);
       } on FirebaseAuthException catch (e) {
@@ -30,15 +31,15 @@ class RecuperarButton extends StatelessWidget {
 
     return BlocBuilder<AuthPageBloc,AuthPageState>(
       builder: (context, state) {
-        bool button = state is AuthPageRecuperarSenhaState && state.button;
+        bool button = !EmailValidator.validate(state.email);
         return SizedBox(
           width: size.width,
           height: 46,
           child: ElevatedButton(
               style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(button ? null : const Color.fromRGBO(117, 54, 175, 0.4)),
+                  backgroundColor: MaterialStatePropertyAll(!button ? null : const Color.fromRGBO(117, 54, 175, 0.4)),
                   elevation: const MaterialStatePropertyAll(0)),
-              onPressed: () => button ? resetPassword() : null,
+              onPressed: () => !button ? resetPassword(state.email) : null,
               child: const Text(
                 "Recuperar senha",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),

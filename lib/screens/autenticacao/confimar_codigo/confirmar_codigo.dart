@@ -11,7 +11,7 @@ class ConfirmarCodigo extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AuthPageBloc, AuthPageState>(
       builder: (context, state) {
-        bool telefone = state is AuthPageConfirmarCodigoState && state.telefone;
+        bool telefone = state.telefone;
         return Scaffold(
           resizeToAvoidBottomInset: false,
           body: Padding(
@@ -27,7 +27,7 @@ class ConfirmarCodigo extends StatelessWidget {
                 RichText(
                   textAlign: TextAlign.center,
                     text: TextSpan(
-                    text: "Insira o código de confirmação que enviamos para o ${telefone ? "telefone +55 ${cellController.text}" : "email ${emailController.text}"}.",
+                    text: "Insira o código de confirmação que enviamos para o ${telefone ? "telefone +55 ${state.cell}" : "email ${state.email}"}.",
                     style: const TextStyle(color: Colors.black),
                     children: [
                       TextSpan(
@@ -46,7 +46,7 @@ class ConfirmarCodigo extends StatelessWidget {
                         text: TextSpan(
                             text: "Voltar ao Cadastrar ${telefone ? "telefone" : "email"}",
                             style: const TextStyle(color: base, fontWeight: FontWeight.bold),
-                            recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(novaTela: telefone ? "Telefone" : "Email"))
+                            recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(tela: "TelefoneEmail"))
                         )
                     ),
                   ),

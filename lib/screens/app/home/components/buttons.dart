@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:trade_it/constants/constants.dart';
 
-import '../../../../constants/constants.dart';
-
-class Buttons extends StatefulWidget {
+class Buttons extends StatelessWidget {
   const Buttons({Key? key}) : super(key: key);
 
-  @override
-  State<Buttons> createState() => _ButtonsState();
-}
-
-class _ButtonsState extends State<Buttons> {
   @override
   Widget build(BuildContext context) {
     return Row(

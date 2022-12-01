@@ -7,13 +7,13 @@ class TelefoneButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AuthPageBloc, AuthPageState>(
       builder: (context, state) {
-        bool telefone = state is AuthPageCadastrarTelefoneEmailState && state.telefone;
+        bool telefone = state.telefone;
         return Expanded(
           child: Column(
             children: [
               TextButton(onPressed: () {
-                context.read<AuthPageBloc>().add(MudarTela(novaTela: "Telefone"));
                 FocusManager.instance.primaryFocus?.unfocus();
+                context.read<AuthPageBloc>().add(MudarTela(telefone: true));
               },
                   style: const ButtonStyle(
                       splashFactory: NoSplash.splashFactory,

@@ -17,7 +17,7 @@ class EntreAquiButton extends StatelessWidget {
                 side: BorderSide(color: Color.fromRGBO(117, 54, 175, 1)),
                 borderRadius: BorderRadius.all(Radius.circular(5)))),
             elevation: MaterialStatePropertyAll(0)),
-        onPressed: () => context.read<AuthPageBloc>().add(MudarTela(novaTela: "Login")),
+        onPressed: () => context.read<AuthPageBloc>().add(MudarTela(tela: "Login")),
         child: const Text("Já tem uma conta? Entre aqui",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color.fromRGBO(117, 54, 175, 1))),
       ),

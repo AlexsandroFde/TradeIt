@@ -1,16 +1,10 @@
 import "package:flutter/material.dart";
 import 'package:trade_it/constants/constants.dart';
+import 'package:trade_it/screens/app/notificacoes/components/lista_notificacoes.dart';
 
-import 'components/lista_notificacoes.dart';
-
-class Notificacoes extends StatefulWidget {
+class Notificacoes extends StatelessWidget {
   const Notificacoes({Key? key}) : super(key: key);
 
-  @override
-  State<Notificacoes> createState() => _NotificacoesState();
-}
-
-class _NotificacoesState extends State<Notificacoes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

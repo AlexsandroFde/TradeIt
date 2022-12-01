@@ -1,19 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:trade_it/constants/constants.dart';
+import 'package:trade_it/screens/app/home/components/components.dart';
 
-import 'components/buttons.dart';
-import 'components/custom_app_bar.dart';
-import 'components/drawer_bar.dart';
-import 'components/lista_anuncios.dart';
-
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {

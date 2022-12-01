@@ -8,7 +8,7 @@ class CadastrarTelefoneEmail extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AuthPageBloc, AuthPageState>(
       builder: (context, state) {
-        bool telefone = state is AuthPageCadastrarTelefoneEmailState && state.telefone;
+        bool telefone = state.telefone;
         return Scaffold(
           body: Column(
             children: [
@@ -33,7 +33,7 @@ class CadastrarTelefoneEmail extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 15),
-                        const TelefoneEmailTextField(),
+                        state.telefone ? const TelefoneTextField() : const EmailTextFieldC(),
                         const SizedBox(height: 15),
                         Text("Você poderá receber notificações por ${telefone ? "SMS" : "email"} para fins de segurança e login.",
                             style: const TextStyle(color: Colors.black54),

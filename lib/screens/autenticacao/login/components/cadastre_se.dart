@@ -20,7 +20,7 @@ class CadastreSe extends StatelessWidget {
             children: [
               TextSpan(
                   text: " Cadastre-se", style: const TextStyle(fontWeight: FontWeight.bold, color: base),
-                  recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(novaTela: "Cadastro"))
+                  recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(tela: "Cadastro"))
               )
             ]
         )),

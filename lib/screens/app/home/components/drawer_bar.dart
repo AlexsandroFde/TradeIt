@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:trade_it/screens/autenticacao/bloc/auth_page_bloc.dart';
+import 'package:trade_it/screens/autenticacao/bloc/auth_page_events.dart';
+import 'package:trade_it/constants/constants.dart';
+import 'package:trade_it/data/data.dart';
+import 'package:trade_it/models/barra_lateral.dart';
 import 'dart:math' as math;
-
-import '../../../autenticacao/bloc/auth_page_bloc.dart';
-import '../../../autenticacao/bloc/auth_page_events.dart';
-import '../../../../constants/constants.dart';
-import '../../../../data/data.dart';
-import '../../../../models/barra_lateral.dart';
-
 
 class DrawerBar extends StatelessWidget {
   const DrawerBar({Key? key}) : super(key: key);

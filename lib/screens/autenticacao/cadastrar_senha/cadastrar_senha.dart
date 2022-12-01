@@ -11,7 +11,7 @@ class CadastrarSenha extends StatelessWidget {
     return Scaffold(
       body: BlocBuilder<AuthPageBloc, AuthPageState>(
         builder: (context, state) {
-          bool telefone = state is AuthPageCadastrarSenhaState && state.telefone;
+          bool telefone = state.telefone;
           return Column(
             children: [
               Expanded(
@@ -54,7 +54,7 @@ class CadastrarSenha extends StatelessWidget {
                       text: TextSpan(
                           text: "Voltar ao Cadastrar ${telefone ? "telefone" : "email"}",
                           style: const TextStyle(color: base, fontWeight: FontWeight.bold),
-                          recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(novaTela: telefone ? "Telefone" : "Email"))
+                          recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(tela: "TelefoneEmail"))
                       )
                   ),
                 ),

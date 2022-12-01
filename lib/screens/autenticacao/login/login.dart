@@ -42,7 +42,7 @@ class Login extends StatelessWidget {
                     child: RichText(text: TextSpan(
                         text: "Esqueceu a senha?",
                         style: const TextStyle(color: base),
-                        recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(novaTela: "Recuperar"))
+                        recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(tela: "Recuperar"))
                       )
                     ),
                   ),

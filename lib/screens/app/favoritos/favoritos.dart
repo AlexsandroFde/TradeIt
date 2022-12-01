@@ -1,16 +1,9 @@
 import "package:flutter/material.dart";
 import 'package:trade_it/constants/constants.dart';
+import 'package:trade_it/screens/app/favoritos/componets/lista_favoritos.dart';
 
-import 'componets/lista_favoritos.dart';
-
-class Favoritos extends StatefulWidget {
+class Favoritos extends StatelessWidget {
   const Favoritos({Key? key}) : super (key: key);
-
-  @override
-  State<Favoritos> createState() => _FavoritosState();
-}
-
-class _FavoritosState extends State<Favoritos> {
 
   @override
   Widget build(BuildContext context) {

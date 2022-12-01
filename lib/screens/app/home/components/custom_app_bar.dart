@@ -2,8 +2,7 @@ import 'package:antdesign_icons/antdesign_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heroicons/heroicons.dart';
-
-import '../../../../constants/constants.dart';
+import 'package:trade_it/constants/constants.dart';
 
 class CustomAppBar extends AppBar {
   CustomAppBar({super.key});

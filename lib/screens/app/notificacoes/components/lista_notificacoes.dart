@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trade_it/data/data.dart';
-
-import '../../../../models/notificacao.dart';
+import 'package:trade_it/models/notificacao.dart';
 
 class ListaNotificacoes extends StatelessWidget {
   const ListaNotificacoes({Key? key}) : super(key: key);

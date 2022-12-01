@@ -1,8 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../data/data.dart';
-import '../../../../models/anuncio.dart';
+import 'package:trade_it/data/data.dart';
+import 'package:trade_it/models/anuncio.dart';
 
 class ListaAnuncios extends StatelessWidget {
   const ListaAnuncios({Key? key}) : super(key: key);

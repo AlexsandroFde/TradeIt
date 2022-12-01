@@ -20,7 +20,7 @@ class Entrar extends StatelessWidget {
             children: [
               TextSpan(
                   text: " Entrar", style: const TextStyle(fontWeight: FontWeight.bold, color: base),
-                  recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(novaTela: "Login"))
+                  recognizer: TapGestureRecognizer()..onTap = () => context.read<AuthPageBloc>().add(MudarTela(tela: "Login"))
               )
             ]
         )),
