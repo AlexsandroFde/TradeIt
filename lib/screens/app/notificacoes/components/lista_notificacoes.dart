@@ -10,7 +10,8 @@ class ListaNotificacoes extends StatelessWidget {
     return MaterialButton(
       onPressed: () => Navigator.pushNamed(context, "/Notificacao"),
       height: 85,
-      shape: const Border(bottom: BorderSide(color: Color(0x15000000))),
+      shape: const Border(bottom: BorderSide(color: Colors.black12)),
+      elevation: 0,
       color: Colors.white,
       padding: const EdgeInsets.only(left: 6, top: 0,right: 6, bottom: 0),
       child: Row(

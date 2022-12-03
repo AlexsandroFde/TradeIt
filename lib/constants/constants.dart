@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trade_it/screens/app/buscar/buscar.dart';
 import 'package:trade_it/screens/autenticacao/recuperar_senha/recuperar_senha.dart';
 import 'package:trade_it/screens/app/favoritos/favoritos.dart';
 import 'package:trade_it/screens/app/notificacoes/notificacoes.dart';
@@ -19,7 +20,7 @@ Map<String, Widget Function(BuildContext)> rotas = {
   "/Chat" : (context) => const Scaffold(body: Text("Chat")),
   "/Favoritos" : (context) => const Favoritos(),
   "/Conta" : (context) => const Scaffold(body: Text("Minha conta")),
-  "/Pesquisa" : (context) => const Scaffold(body: Text("Pesquisa")),
+  "/Buscar" : (context) => const Buscar(),
   "/Categorias" : (context) => const Scaffold(body: Text("Categorias")),
   "/Filtros" : (context) => const Scaffold(body: Text("Filtros")),
   "/Anuncio" : (context) => const Scaffold(body: Text("Anúncio")),

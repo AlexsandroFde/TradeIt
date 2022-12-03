@@ -74,7 +74,7 @@ class ListaAnuncios extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(5),topLeft: Radius.circular(5)),
                       image: DecorationImage(image: AssetImage(lista.imagem),
-                          fit: BoxFit.fitWidth
+                          fit: BoxFit.fill
                       )),
                 ),
                 const SizedBox(width: 10),

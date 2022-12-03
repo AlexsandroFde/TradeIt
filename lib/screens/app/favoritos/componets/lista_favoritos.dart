@@ -23,7 +23,7 @@ class ListaFavoritos extends StatelessWidget {
               width: 80,
               decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(5), topLeft: Radius.circular(5)),
-                  image: DecorationImage(image: AssetImage(lista.anuncio.imagem), fit: BoxFit.fitWidth)
+                  image: DecorationImage(image: AssetImage(lista.anuncio.imagem), fit: BoxFit.fill)
               ),
             ),
             const SizedBox(width: 10,),

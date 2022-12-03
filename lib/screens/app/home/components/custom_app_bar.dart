@@ -22,7 +22,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
           icon: const Icon(AntIcons.bellOutlined),
         ),
         IconButton(
-          onPressed: () => Navigator.pushNamed(context, "/Pesquisa"),
+          onPressed: () => Navigator.pushNamed(context, "/Buscar"),
           icon: const HeroIcon(HeroIcons.magnifyingGlass),
         ),
         IconButton(

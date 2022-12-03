@@ -58,12 +58,10 @@ class DrawerBar extends StatelessWidget {
             },
           ),
         ),
-        const Divider(
-          thickness: 1.3,
-        ),
         MaterialButton(
           height: 50,
           onPressed: () => context.read<AuthPageBloc>().add(Deslogar()),
+          shape: const Border(top: BorderSide(color: Colors.black54)),
           child: Row(
             children: [
               Transform(
