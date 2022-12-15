@@ -1,16 +1,11 @@
-# teste
+# TradeIT
 
-A new Flutter project.
+> O aplicativo tem a finalidade de facilitar troca de jogos entre pessoas, apartir da criação de anúncios de usuários, envolvendo algum jogo físico, e da requisição destes anúncios por outros usuários, ajudando também na comunicção entre ambos.
 
-## Getting Started
+### Ajustes e melhorias
 
-This project is a starting point for a Flutter application.
+O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [ ] Criação das telas restantes
+- [ ] Termino do back-end das telas de autentificação
+- [ ] Implementação do funcionamento das trocas através de um banco de dado
