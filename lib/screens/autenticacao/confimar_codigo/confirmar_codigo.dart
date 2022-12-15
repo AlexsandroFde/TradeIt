@@ -1,5 +1,4 @@
 import 'package:flutter/gestures.dart';
-import 'package:trade_it/screens/autenticacao/auth_page.dart';
 import 'package:trade_it/screens/autenticacao/confimar_codigo/components/components.dart';
 import 'package:trade_it/constants/constants.dart';
 import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
@@ -19,11 +18,9 @@ class ConfirmarCodigo extends StatelessWidget {
             child: Column(
               children: [
                 const Text("INSERIR CÓDIGO DE CONFIRMAÇÃO", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
-                const SizedBox(height: 25),
-                const Expanded(
-                  flex: 3,
-                  child: CodigoTextField(),
-                ),
+                const SizedBox(height: 35),
+                const CodigoTextField(),
+                const SizedBox(height: 35),
                 RichText(
                   textAlign: TextAlign.center,
                     text: TextSpan(

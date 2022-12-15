@@ -10,7 +10,7 @@ class ListaFavoritos extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(6, 5, 6, 5),
       child: MaterialButton(
-        onPressed: () {Navigator.pushNamed(context, "/Favorito");},
+        onPressed: () => Navigator.pushNamed(context, "/Anuncio"),
         height: 100,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
         color: Colors.white,

@@ -5,6 +5,7 @@ import 'package:trade_it/models/favorito.dart';
 
 import '../models/anuncio.dart';
 import '../models/barra_lateral.dart';
+import '../models/categoria.dart';
 import '../models/notificacao.dart';
 
 final _anuncios = BarraLateral(
@@ -14,8 +15,8 @@ final _anuncios = BarraLateral(
 );
 final _inserir = BarraLateral(
     icon: CupertinoIcons.pencil,
-    text: "Inserir anúncios",
-    rota: "/Inserir"
+    text: "Inserir anúncio",
+    rota: "/InserirAnuncio"
 );
 final _notificacoes = BarraLateral(
     icon: AntIcons.bellOutlined,
@@ -35,7 +36,7 @@ final _favoritos = BarraLateral(
 final _conta = BarraLateral(
     icon: Icons.person_outline_rounded,
     text: "Minha conta",
-    rota: "/Conta"
+    rota: "/MinhaConta"
 );
 
 final List barra = [_anuncios,_inserir,_notificacoes,_chat,_favoritos,_conta];
@@ -98,3 +99,60 @@ final _favorito2 = Favorito(
 );
 
 final List favoritos = [_favorito1, _favorito2];
+
+final _todas = Categoria(
+    image: "assets/images/trade_it_.jpg",
+    title: "Todas as Categorias"
+);
+
+final _ps2 = Categoria(
+    image: "assets/images/playstation.jpg",
+    title: "PlayStation"
+);
+
+final _xbox = Categoria(
+    image: "assets/images/xbox.jpg",
+    title: "Xbox"
+);
+
+final _wii = Categoria(
+    image: "assets/images/wii.jpg",
+    title: "Wii"
+);
+
+final _wiiu = Categoria(
+    image: "assets/images/wii_u.jpg",
+    title: "Wii U"
+);
+
+final _switch = Categoria(
+    image: "assets/images/nintendo_switch.jpg",
+    title: "Nintendo Switch"
+);
+
+final _gameboy = Categoria(
+    image: "assets/images/gameboy.jpg",
+    title: "Gameboy"
+);
+
+final _n3ds = Categoria(
+    image: "assets/images/nintendo_3ds.jpg",
+    title: "Nintendo 3DS"
+);
+
+final _n64 = Categoria(
+    image: "assets/images/nintendo64.jpg",
+    title: "Nintendo 64"
+);
+
+final _psp = Categoria(
+    image: "assets/images/psp.jpg",
+    title: "PSP"
+);
+
+final _gamecube = Categoria(
+    image: "assets/images/gamecube.jpg",
+    title: "Gamecube"
+);
+
+final List categorias = [_todas, _ps2, _xbox, _wii, _wiiu, _switch, _gameboy, _n3ds, _n64, _psp, _gamecube];

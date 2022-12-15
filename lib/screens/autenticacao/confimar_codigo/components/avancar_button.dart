@@ -8,7 +8,7 @@ class AvancarButtonCC extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return BlocBuilder<AuthPageBloc, AuthPageState>(
       builder: (context, state) {
-        bool button = state.codigo.length != 21;
+        bool button = state.codigo.length != 6;
         return SizedBox(
           width: size.width,
           height: 46,

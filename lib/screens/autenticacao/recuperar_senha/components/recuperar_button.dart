@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:trade_it/models/utils.dart';
 import 'package:trade_it/constants/constants.dart';
 import 'package:trade_it/main.dart';
-import 'package:trade_it/screens/autenticacao/auth_page.dart';
 import 'package:trade_it/screens/autenticacao/bloc/bloc.dart';
 
 class RecuperarButton extends StatelessWidget {
@@ -13,6 +12,7 @@ class RecuperarButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     Future resetPassword(String email) async {
+      FocusManager.instance.primaryFocus?.unfocus();
       showDialog(
         context: context,
         barrierDismissible: false,

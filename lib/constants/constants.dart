@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trade_it/screens/app/buscar/buscar.dart';
-import 'package:trade_it/screens/autenticacao/recuperar_senha/recuperar_senha.dart';
+import 'package:trade_it/screens/app/categorias/categorias.dart';
+import 'package:trade_it/screens/app/minha_conta/minhaConta.dart';
 import 'package:trade_it/screens/app/favoritos/favoritos.dart';
 import 'package:trade_it/screens/app/notificacoes/notificacoes.dart';
 
@@ -13,17 +14,19 @@ const Color background = Color.fromRGBO(217, 217, 217, 1);
 
 Map<String, Widget Function(BuildContext)> rotas = {
   // trocar cada Scaffold pelos StatefulWdgets de cada uma das rotas
-  "/Recuperar" : (context) => const RecuperarSenha(),
   "/Anuncios" : (context) => const Scaffold(body: Text("Anúncios")),
-  "/Inserir" : (context) => const Scaffold(body: Text("Inserir anúncios")),
+  "/InserirAnuncio" : (context) => const Scaffold(body: Text("Inserir anúncio")),
   "/Notificacoes" : (context) => const Notificacoes(),
   "/Chat" : (context) => const Scaffold(body: Text("Chat")),
   "/Favoritos" : (context) => const Favoritos(),
-  "/Conta" : (context) => const Scaffold(body: Text("Minha conta")),
+  "/MinhaConta" : (context) => const MinhaConta(),
+  "/Editar" : (context) => const Scaffold(body: Text("Editar")),
+  "/MeusAnuncios" : (context) => const Scaffold(body: Text("Meus anúncios")),
+  "/MeuPerfil" : (context) => const Scaffold(body: Text("Meu perfil")),
+  "/Seguranca" : (context) => const Scaffold(body: Text("Segurança e Privacidade")),
   "/Buscar" : (context) => const Buscar(),
-  "/Categorias" : (context) => const Scaffold(body: Text("Categorias")),
+  "/Categorias" : (context) => const Categorias(),
   "/Filtros" : (context) => const Scaffold(body: Text("Filtros")),
   "/Anuncio" : (context) => const Scaffold(body: Text("Anúncio")),
-  "/Favorito" :(context) => const Scaffold(body: Text("Favorito")),
   "/Notificacao" : (context) => const Scaffold(body: Text("Notificação")),
 };

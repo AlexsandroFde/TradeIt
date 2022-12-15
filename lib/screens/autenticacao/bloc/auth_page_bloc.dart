@@ -4,6 +4,7 @@ import 'package:trade_it/screens/autenticacao/bloc/auth_page_events.dart';
 import 'package:trade_it/screens/autenticacao/bloc/auth_page_state.dart';
 import 'package:trade_it/main.dart';
 import 'package:trade_it/models/utils.dart';
+import 'package:trade_it/screens/autenticacao/auth_page.dart';
 
 class AuthPageBloc extends Bloc<AuthPageEvent, AuthPageState>{
   AuthPageBloc(AuthPageState initialState) : super(AuthPageLoadinState()){
@@ -13,6 +14,7 @@ class AuthPageBloc extends Bloc<AuthPageEvent, AuthPageState>{
   }
 
   _onBuscarUsuario(event, emit) async{
+    FocusManager.instance.primaryFocus?.unfocus();
     try {
       if(event.login == true){
         await FirebaseAuth.instance.signInWithEmailAndPassword(
