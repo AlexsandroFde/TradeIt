@@ -1,6 +1,6 @@
 # TradeIT
 
-> O aplicativo tem a finalidade de facilitar troca de jogos entre pessoas, apartir da criação de anúncios de usuários, envolvendo algum jogo físico, e da requisição destes anúncios por outros usuários, ajudando também na comunicção entre ambos.
+> O aplicativo tem a finalidade de facilitar troca de jogos entre pessoas, apartir da criação de anúncios de usuários, envolvendo algum jogo físico, e da requisição destes anúncios por outros usuários, ajudando também na comunicação entre ambos.
 
 ### Ajustes e melhorias
 
