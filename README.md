@@ -7,5 +7,5 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [ ] Criação das telas restantes
-- [ ] Termino do back-end das telas de autentificação
+- [ ] Termino do back-end das telas de autenticação
 - [ ] Implementação do funcionamento das trocas através de um banco de dado
